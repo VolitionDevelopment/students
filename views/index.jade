@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  hr
+  ul
+    - for(var i = 0; i < students.length; i++)
+      li(class=selected(i) ? "selected" : ""): a(href=selected(i) ? '/students' : '?student=' + i) #{students[i]}
